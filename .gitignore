@@ -1,0 +1,16 @@
+**/bin/
+**/obj/
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/App_Data/
+.venv/
+venv/
+**/__pycache__/
+**/*.pyc
+.vs/
+.tools/
+.env
+.env.*
+**/appsettings.Local.json
+**/appsettings.*.local.json

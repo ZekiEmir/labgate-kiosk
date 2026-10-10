@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>@ViewData["Title"] · LabGate</title><link rel="stylesheet" href="~/kiosk.css" asp-append-version="true"/></head>
+<body><aside class="sidebar"><a class="brand" href="/"><span class="brand-mark">L</span><span>LabGate<small>LABORATUVAR KİOSKU</small></span></a>
+<p class="nav-label">ÇALIŞMA ALANI</p><nav aria-label="Ana menü">
+<a class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Kiosk" ? "active" : "")" href="/"><span aria-hidden="true">▦</span> Kontrol paneli</a>
+<a class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Face" ? "active" : "")" href="/Face"><span aria-hidden="true">◎</span> Kamera ve yüz kaydı</a>
+</nav><div class="sidebar-note"><span class="dot amber"></span> Geliştirme demosu<p>Kamera testleri fiziksel kapıyı açmaz.</p></div>
+<footer>Tasarım Uygulama Projesi<br/>RFID + yüz doğrulaması</footer></aside>
+<div class="workspace"><div class="topbar"><span>Akıllı laboratuvar / @ViewData["Title"]</span><span class="pill muted">Yerel çalışma alanı</span></div>
+<main id="main">@RenderBody()</main><div class="page-footer">LabGate · Tasarım Uygulama Projesi <span>Kayıt saatleri bilgisayarın yerel saat dilimindedir.</span></div></div>
+@await RenderSectionAsync("Scripts", required: false)
+</body></html>
